@@ -1,0 +1,13 @@
+{% extends 'products/abase.html' %}
+
+{% load static %}
+
+{% block title %}{{ block.super }}PRODUCTS{% endblock %}
+{% block procss %}
+    <link rel="stylesheet" href="{% static 'products/css/style_prod.css' %}" />
+{% endblock procss %}
+
+{% block content %}
+<h1>Add Accommodation</h1>
+{% include 'operations/ops.html' %}
+{% endblock content %}

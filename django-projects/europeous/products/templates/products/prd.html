@@ -1,0 +1,28 @@
+{% extends 'products/abase.html' %}
+
+{% load static %}
+
+{% block title %}{{ block.super }}PRODUCTS{% endblock %}
+{% block procss %}
+    <link rel="stylesheet" href="{% static 'products/css/style_prod.css' %}" />
+{% endblock procss %}
+
+{% block content %}
+    <h1>This is my Products Page 1</h1>
+    <ul>
+        <h2>Add Services</h2>
+        {% if ht %}
+            <li>{{ht|upper}}</li>
+        {% endif %}
+        {% for add in ads %}
+            {{ forloop.counter }} {{add|upper}}<br>
+            {% empty %}
+            <h3>Add New</h3>
+        {% endfor %}
+        <li>{{at|truncatechars:"3" }}</li>
+        <li>{{ti|lower}}</li>
+        <li>{{tr|upper|slice:'5'}}</li>
+        <li>{{dt|date:'D d M Y'}}</li>
+        <li>{{dt|time:'H:i'}}</li>
+    </ul>
+{% endblock content %}

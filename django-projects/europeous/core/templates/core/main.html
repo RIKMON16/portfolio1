@@ -1,0 +1,50 @@
+{% extends 'core/base_c.html' %}
+
+{% load static %}
+
+{% block title %}Home Page{% endblock title %}
+{% block corecss %}
+        <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+{% endblock corecss %}
+
+{% block content %}
+{{ block.super }}
+
+<h1>Europeous Tours Ltd</h1>
+<h3 class="services" id="services">We are here to help you</h3>
+<p>From arranging team building days to managing every aspect of your corporate incentive trip to 
+the Europe / UK or Arranging educational visits for college or School groups.</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3><i class="fas fa-bed"></i> Accommodation</h3>
+      <p>Hotel | Apartments | Lodge | B&B</p>
+      <p>Top Destinations</p>
+      <p>London > Paris > Rome > Barcelona</p>
+    </div>
+    <div class="col">
+      <h3><i class="fas fa-shuttle-van"></i> Transfers</h3>
+      <p>Private | SIC</p>
+      <p>We provide all type of transfers.</p>
+      <p>Airport > Hotel > Train Stations > Restaurants...</p>
+    </div>
+    <div class="col">
+      <h3><i class="fas fa-monument"></i> Tours & Activites</h3>
+      <p>Private | SIC</p>
+      <p>We provide all type of transfers.</p>
+      <p>Airport > Hotel > Train Stations > Restaurants...</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      2 of 3
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</div>
+{% endblock content %}

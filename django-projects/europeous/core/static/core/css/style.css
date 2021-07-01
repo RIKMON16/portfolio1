@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&family=Comfortaa:wght@600&family=Overpass:wght@400;600&family=Roboto&display=swap');
+
+body {
+    background-color: #1a4fd6;
+    font-family: 'Chivo', 'Roboto', sans-serif;
+}
+
+.main23 {
+    background-color: #D3CCE3;  /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to bottom, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 10px 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.services {
+    font-family: 'Comfortaa', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}

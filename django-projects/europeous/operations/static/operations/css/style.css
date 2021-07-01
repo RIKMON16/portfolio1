@@ -1,0 +1,10 @@
+body {
+    background-color: turquoise;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkred;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}

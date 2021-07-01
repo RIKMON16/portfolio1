@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'operations/css/style.css' %}" />
+    <title>Operations</title>
+</head>
+<body>
+    <h1>Operations Page</h1><h2><a href="{% url 'landing' %}">Products</a></h2>
+    <img src="{% static 'operations/images/lon_tel.jpg' %}" alt="London By Night" />
+    <img src="{%  get_static_prefix %}operations/images/lon_tel.jpg" alt="London By Night" />
+    <ul>
+        <h2 style="color: #8b0000;">Example: 1</h2>
+        <li>{{hotels}}</li>
+        <li>{{hotels.htl1}}</li>
+        <br>
+        <li>Name: {{hotels.htl1.name}} <br>
+            Address: {{hotels.htl1.address}}<br>
+            City: {{hotels.htl1.city}}
+        </li>
+        <br>
+        <li>Name: {{hotels.htl2.name}} <br>
+            Address: {{hotels.htl2.address}}<br>
+            City: {{hotels.htl2.city}}
+        </li>
+        <br>
+        <li>Name: {{hotels.htl3.name}} <br>
+            Address: {{hotels.htl3.address}}<br>
+            City: {{hotels.htl3.city}}
+        </li>
+        <br>
+        <li>Name: {{hotels.htl4.name}} <br>
+            Address: {{hotels.htl4.address}}<br>
+            City: {{hotels.htl4.city}}
+        </li>
+        <br>
+        <li>Name: {{hotels.htl5.name}} <br>
+            Address: {{hotels.htl5.address}}<br>
+            City: {{hotels.htl5.city}}
+        </li>
+        <br>
+        <li>Name: {{hotels.htl6.name}} <br>
+            Address: {{hotels.htl6.address}}<br>
+            City: {{hotels.htl6.city}}
+        </li>
+        <h2 style="color: #8b0000;">Example: 2</h2>
+        {% for key, value in hotels.htl1.items %}
+            <li style='list-style:none;'>{{forloop.counter}} {{key|capfirst}} : {{value}}</li>
+            <!--forloop.counter is not for this type of data, is usefull but data should be different, still keeping it as an example-->
+        {% endfor %}
+        <br>
+        <h2 style="color: #8b0000;">Example: 3</h2>
+        {% for key, value in hotels.items %}
+            <li style='list-style:none;'>{{key|capfirst}} : {{value}}</li>
+            {% for k, v in value.items %}
+                <li style='list-style:none;'>{{k|capfirst}} : {{v}}</li>
+            {% endfor %}
+        {% endfor %}
+        <br>
+        <h2 style="color: #8b0000;">Example: 4</h2>
+        {% for key, value in hotels.items %}
+            {% for k, v in value.items %}
+                <li style='list-style:none;'>{{k|capfirst}} : {{v}}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
